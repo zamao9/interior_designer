@@ -1,5 +1,6 @@
 body {
   font-size: 18px;
+  font-family: 'Comfortaa', cursive;
   color: #6c6c6c;
   font-weight: 300;
   line-height: 1;
@@ -57,6 +58,7 @@ a {
 .logo_title {
   width: fit-content;
 
+  font-family: 'Pacifico', cursive;
   font-size: 35px;
   color: #414141;
   font-weight: 700;
