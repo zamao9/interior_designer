@@ -453,7 +453,9 @@ a {
 }
 
 .publick_interior_title {
-  margin-bottom: 10px;
+  width: 290px;
+
+  margin:0 auto 10px;
 }
 
 .publick_interior_head_text {
@@ -589,6 +591,8 @@ a {
   }
 
   .publick_interior_title {
+    width: 100%;
+
     text-align: left;
     line-height: 1.4;
   }
