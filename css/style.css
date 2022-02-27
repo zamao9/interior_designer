@@ -583,12 +583,14 @@ a {
   }
 
   .publick_interior_head {
-    width: 30%;
+    width: 20%;
 
     padding-left: 30px;
   }
+
   .publick_interior_title {
     text-align: left;
+    line-height: 1.4;
   }
 
   .publick_interior_head_text {
