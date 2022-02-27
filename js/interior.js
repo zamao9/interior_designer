@@ -18,10 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i=0; links.length > i; ++i) {
       links[i].addEventListener('click', (event) => {
-        for (let i=0; links.length > i; ++i) {
-          links[i].classList.remove('active');
-        }
-        event.currentTarget.classList.add('active');
+        event.currentTarget.classList.remove('active');
         nav.classList.remove('active');
         burger.classList.remove('active');
         body[0].classList.remove('block');
