@@ -498,10 +498,10 @@ a {
   height: 200px;
 
   overflow: hidden;
+  transition: 0.3s ease;
 
   margin-bottom: 30px;
 }
-
 .service_img img {
   width: 100%;
   height: 100%;
@@ -510,6 +510,9 @@ a {
 
   object-fit: cover;
   object-position: 50% 70%;
+}
+.service_img:hover {
+  opacity: 0.1;
 }
 
 .service_content {
