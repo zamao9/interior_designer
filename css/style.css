@@ -649,6 +649,195 @@ hr {
 
 
 
+/* CONTACTS страница */
+.contacts_items {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.contacts_img {
+  width: 100%;
+  height: 250px;
+
+  overflow: hidden;
+}
+.contacts_img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.contacts_text {
+  margin-bottom: 15px;
+}
+
+.contacts_text_link {
+  font-weight: 700;
+}
+.contacts_text_link_a {
+  font-weight: 300;
+  color: #6c6c6c;
+  transition: 0.3s ease;
+
+  margin-left: 5px;
+}
+.contacts_text_link_a:hover {
+  opacity: 0.5;
+}
+
+.contacts_icons {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+
+  font-size: 30px;
+  color: #6c6c6c;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  margin: 0 20px;
+}
+.icons:hover {
+  opacity: 0.5;
+}
+
+form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.input_block {
+  width: 100%;
+  height: 30px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+
+  line-height: 1;
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+  color: #6c6c6c;
+
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  border-radius: 0;
+  padding: 5px 10px;
+  background: none;
+}
+.input:focus {
+  outline: none;
+  border-color: rgba(51, 51, 51, 0.3);
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  opacity: 0;
+  transform: translateY(-50%) translateX(100%);
+}
+
+.input_block label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  pointer-events: none;
+
+  font-size: 15px;
+  line-height: 1;
+  font-family: 'Comfortaa', cursive;
+  color: #6c6c6c;
+}
+
+.textarea_block {
+  width: 100%;
+  height: 150px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: 30px;
+}
+
+.textarea_block label {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  pointer-events: none;
+
+  line-height: 1;
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+  color: #6c6c6c;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+
+  resize: none;
+
+  line-height: 1;
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+  color: #6c6c6c;
+
+  padding: 12px 10px;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  border-radius: 0;
+  background: none;
+}
+.textarea:focus {
+  outline: none;
+  border-color: rgba(51, 51, 51, 0.3);
+}
+
+.textarea:focus ~ label,
+.textarea:valid ~ label {
+  opacity: 0;
+  transform: translateY(-50%) translateX(100%);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -789,6 +978,10 @@ hr {
 
 
   /* SERVICE страница */
+  .service {
+    padding: 25px 15px 20px;
+  }
+
   .service_items {
     flex-direction: row;
   }
@@ -810,6 +1003,51 @@ hr {
     height: auto;
   }
 
+
+
+  /* CONTACTS страница */
+  .contacts {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .contacts_items {
+    width: 50%;
+
+    margin-bottom: 0;
+  }
+
+  .contacts_last {
+    width: 40%;
+  }
+
+  .contacts_img {
+    height: 420px;
+
+    margin-bottom: 0;
+  }
+
+  .contacts_title {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contacts_text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contacts_icons {
+    justify-content: flex-start;
+  }
+  .icons {
+    margin: 0 40px 0 0;
+  }
+
+  form {
+    align-items: flex-start;
+  }
 
 
 
