@@ -26,30 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-});
 
 
-$(document).ready(function () {
+  /* SLIDER */
 
   let position = 0;
   const slidesToShow = 1,
         slidesToScroll = 1,
-        container = $('.slider_container'),
-        track = $('.slider_track'),
-        item = $('.slider_item'),
-        btnPrev = $('.btn_prev'),
-        btnNext = $('.btn_next'),
-        itemWidth = container.width() / slidesToShow,
+        container = document.querySelector('.slider_container'),
+        track = document.querySelector('.slider_track'),
+        btnPrev = document.querySelector('.btn_prev'),
+        btnNext = document.querySelector('.btn_next'),
+        itemWidth = container.clientWidth / slidesToShow,
         movePosition = slidesToScroll * itemWidth,
-        itemsCount = item.length;
+        items = document.querySelectorAll('.slider_item'),
+        itemsCount = items.length;
 
-  item.each(function(index, item) {
-    $(item).css({
-      minWidth: itemWidth,
-    });
+  items.forEach((item) => {
+    item.style.minWidth = `${itemWidth}px`;
   });
 
-  btnPrev.click(function() {
+  btnPrev.addEventListener('click', () => {
     const itemsLeft = Math.abs(position) / itemWidth;
     position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
 
@@ -58,7 +55,7 @@ $(document).ready(function () {
   });
 
 
-  btnNext.click(function() {
+  btnNext.addEventListener('click', () => {
     const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
     position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
 
@@ -67,22 +64,17 @@ $(document).ready(function () {
   });
 
   const setPosition = () => {
-    track.css({
-      transform: `translateX(${position}px)`
-    });
+    track.style.transform = `translateX(${position}px)`;
   };
 
   const checkBtns = () => {
-    btnPrev.prop('disabled', position === 0);
-    btnNext.prop(
-      'disabled',
-      position <= -(itemsCount - slidesToShow) * itemWidth
-    );
+    btnPrev.disabled = position === 0;
+    btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
   };
 
   checkBtns();
 
+});
 
-})
 
 
