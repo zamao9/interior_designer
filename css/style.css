@@ -3,7 +3,7 @@ body {
   font-family: 'Comfortaa', cursive;
   color: #6c6c6c;
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.2;
 
   margin: 0;
   padding: 0;
@@ -635,6 +635,12 @@ hr {
   margin-top: 15px;
 }
 
+.order_service_text_link {
+  transition: 0.3s ease;
+}
+.order_service_text_link:hover {
+  opacity: 0.5;
+}
 
 
 
