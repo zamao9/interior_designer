@@ -24,14 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
         body[0].classList.remove('block');
       })
     }
+  };
+
+});
 
 
 
-  }
 
 
 
 
 
 
-})
+
+
+
+
+

@@ -474,7 +474,128 @@ a {
   margin-bottom: 15px;
 }
 
+/* SLIDER */
+.slider_block {
+  width: 100%;
 
+  position: relative;
+
+  margin-bottom: 30px;
+}
+
+.slider_container {
+  overflow: hidden;
+
+  margin: 0 auto;
+}
+
+.slider_track {
+  display: flex;
+  transition: 1s;
+}
+
+.slider_item {
+  width: 100%;
+  height: 180px;
+
+  overflow: hidden;
+}
+.slider_item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+
+.slider_btn {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.btn_prev {
+  left: 0;
+
+  width: 30px;
+  height: 100px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 0;
+  color: transparent;
+}
+.btn_prev:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%) rotate(45deg);
+
+  width: 10px;
+  height: 10px;
+
+  border-bottom: 1px solid #333;
+  border-left: 1px solid #333;
+}
+.btn_prev:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.btn_prev:disabled:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.btn_prev:hover {
+  background-color: #fff;
+}
+
+.btn_next {
+  right: 0;
+
+  width: 30px;
+  height: 100px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 0;
+  color: transparent;
+}
+.btn_next:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%) rotate(45deg);
+
+  width: 10px;
+  height: 10px;
+
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+}
+.btn_next:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.btn_next:disabled:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.btn_next:hover {
+  background-color: #fff;
+}
 
 
 
@@ -855,10 +976,6 @@ form {
 
 
 
-
-
-
-
 @media (min-width: 768px) {
   /* HEADER */
   .header_content {
@@ -987,6 +1104,9 @@ form {
     text-align: left;
   }
 
+  .slider_item {
+    height: 400px;
+  }
 
 
   /* SERVICE страница */
@@ -1069,6 +1189,12 @@ form {
 
 
 @media (min-width: 1024px) {
+  /* PUBLIC страница */
+  .slider_item {
+    height: 550px;
+  }
+
+
   /* FOOTER */
   .footer_links {
     font-size: 15px;
