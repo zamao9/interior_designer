@@ -236,6 +236,8 @@ a {
   width: 100%;
   max-width: 980px;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,17 +287,16 @@ a {
 
   cursor: pointer;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
   transition: 0.3s ease;
+  font-weight: 300;
+  font-family: 'Comfortaa', cursive;
 
   border: none;
   background-color: #6c6c6c;
   padding: 20px 0;
   margin-bottom: 50px;
-}
-.btn:hover {
-  background-color: rgba(108, 108, 108);
 }
 .btn:after {
   position: absolute;
@@ -479,6 +480,173 @@ a {
 
 
 
+/* SERVICE страница */
+.service_items {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.service_img {
+  width: 100%;
+  height: 200px;
+
+  overflow: hidden;
+
+  margin-bottom: 30px;
+}
+
+.service_img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+
+.service_content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service_title {
+  transition:  0.3s ease;
+
+  margin-bottom: 15px;
+}
+.service_title:hover {
+  opacity: 0.5;
+}
+
+.service_text {
+  margin-bottom: 15px;
+}
+
+.service_btn {
+  width: 150px;
+
+  text-transform: capitalize;
+
+  background-color: #6f8aff;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+.service_btn:after {
+  background-color: #3854cc;
+}
+
+
+
+
+
+
+
+
+/* ORDER_SERVICE страница */
+.back {
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+  left: 30px;
+
+  transition: 0.3s ease;
+  color: #6f8aff;
+  font-weight: 400;
+}
+.back:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%) rotate(45deg);
+
+  width: 6px;
+  height: 6px;
+
+  transition: 0.3s ease;
+  border-bottom: 1px solid #6f8aff;
+  border-left: 1px solid #6f8aff;
+}
+.back:hover {
+  color: #333;
+}
+.back:hover:before {
+  border-color: #333;
+}
+
+.order_service {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order_service_title {
+  margin-top: 35px;
+}
+
+.order_service_text {
+  margin-bottom: 15px;
+}
+
+.order_service_img {
+  width: 100%;
+  height: 200px;
+
+  overflow: hidden;
+
+  margin: 15px 0 30px;
+}
+.order_service_img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+
+hr {
+  width: 100%;
+  max-width: 500px;
+  height: 1px;
+
+  border: none;
+  background-color: rgba(51, 51, 51, 0.1);
+  margin: 15px 0 30px;
+}
+
+.subtitle_title {
+  font-size: 20px;
+  font-weight: 600;
+
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -610,6 +778,30 @@ a {
 
   .publick_interior_text {
     text-align: left;
+  }
+
+
+
+  /* SERVICE страница */
+  .service_items {
+    flex-direction: row;
+  }
+
+  .service_img {
+    height: auto;
+
+    margin-bottom: 0;
+  }
+
+
+
+  /* ORDER_SERVICE страница */
+  .order_service_block {
+    padding: 50px 15px;
+  }
+
+  .order_service_img {
+    height: auto;
   }
 
 
