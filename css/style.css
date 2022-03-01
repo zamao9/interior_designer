@@ -530,7 +530,7 @@ a {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 10px 0;
 }
 .slider_item:hover
 .slider_item_poject_name {
@@ -542,7 +542,6 @@ a {
   width: 100%;
 
   font-size: 18px;
-  text-align: left;
   color: #fff;
 
   margin-bottom: 5px;
@@ -552,7 +551,6 @@ a {
   width: 100%;
 
   font-size: 15px;
-  text-align: left;
   color: #fff;
 
   margin-bottom: 0;
@@ -1433,6 +1431,19 @@ form {
   .slider_item {
     height: 400px;
   }
+
+  .slider_item_poject_name {
+    padding: 10px;
+  }
+
+  .slider_item_title {
+    text-align: left;
+  }
+
+  .slider_item_text {
+    text-align: left;
+  }
+
 
 
   /* POPUP_SLIDER */
