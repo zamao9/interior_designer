@@ -74,7 +74,90 @@ document.addEventListener('DOMContentLoaded', () => {
 
   checkBtns();
 
+
+
+
+  /* POPUP */
+
+  popupSlider();
+
+  function popupSlider() {
+    let popup_container = document.querySelector('.popup_container'),
+        popup_close = document.querySelector('.popup_close'),
+        slider_item = document.querySelectorAll('.slider_item'),
+        body = document.getElementsByTagName('body');
+
+    for (let i=0; slider_item.length > i; ++i) {
+      slider_item[i].addEventListener('click', (event) => {
+        popup_container.classList.add('active');
+        body[0].classList.add('block');
+      })
+    };
+
+    popup_close.addEventListener('click', (event) => {
+      popup_container.classList.remove('active');
+      body[0].classList.remove('block');
+    });
+  };
+
+
+
+
+  let popupPosition = 0;
+  const popupSlidesToShow = 1,
+        popupSlidesToScroll = 1,
+        popupContainer = document.querySelector('.popup_slider_slider_container'),
+        popupTrack = document.querySelector('.popup_slider_slider_track'),
+        popupBtnPrev = document.querySelector('.popup_slider_btn_prev'),
+        popupBtnNext = document.querySelector('.popup_slider_btn_next'),
+        popupItemWidth = popupContainer.clientWidth / popupSlidesToShow,
+        popupMovePosition = popupSlidesToScroll * popupItemWidth,
+        popupItems = document.querySelectorAll('.popup_slider_slider_item'),
+        popupItemsCount = popupItems.length;
+
+  popupItems.forEach((item) => {
+    item.style.minWidth = `${popupItemWidth}px`;
+  });
+
+  popupBtnPrev.addEventListener('click', () => {
+    const popupItemsLeft = Math.abs(popupPosition) / popupItemWidth;
+    popupPosition += popupItemsLeft >= popupSlidesToScroll ? popupMovePosition : popupItemsLeft * popupItemWidth;
+
+    popupSetPosition();
+    popupCheckBtns();
+  });
+
+
+  popupBtnNext.addEventListener('click', () => {
+    const popupItemsLeft = popupItemsCount - (Math.abs(popupPosition) + popupSlidesToShow * popupItemWidth) / popupItemWidth;
+    popupPosition -= popupItemsLeft >= popupSlidesToScroll ? popupMovePosition : popupItemsLeft * popupItemWidth;
+
+    popupSetPosition();
+    popupCheckBtns();
+  });
+
+  const popupSetPosition = () => {
+    popupTrack.style.transform = `translateX(${popupPosition}px)`;
+  };
+
+  const popupCheckBtns = () => {
+    popupBtnPrev.disabled = popupPosition === 0;
+    popupBtnNext.disabled = popupPosition <= -(popupItemsCount - popupSlidesToShow) * popupItemWidth;
+  };
+
+  popupCheckBtns();
+
+
+
+
+
+
 });
+
+
+
+
+
 
 
 
