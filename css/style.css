@@ -530,7 +530,7 @@ a {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .slider_item:hover
 .slider_item_poject_name {
@@ -541,7 +541,7 @@ a {
 .slider_item_title {
   width: 100%;
 
-  font-size: 18px;
+  font-size: 15px;
   color: #fff;
 
   margin-bottom: 5px;
@@ -550,7 +550,7 @@ a {
 .slider_item_text {
   width: 100%;
 
-  font-size: 15px;
+  font-size: 12px;
   color: #fff;
 
   margin-bottom: 0;
@@ -1438,10 +1438,12 @@ form {
 
   .slider_item_title {
     text-align: left;
+    font-size: 18px;
   }
 
   .slider_item_text {
     text-align: left;
+    font-size: 15px;
   }
 
 
