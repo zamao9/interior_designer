@@ -79,30 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* POPUP */
 
-  popupSlider();
-
-  function popupSlider() {
-    let popup_container = document.querySelector('.popup_container'),
-        popup_close = document.querySelector('.popup_close'),
-        slider_item = document.querySelectorAll('.slider_item'),
-        body = document.getElementsByTagName('body');
-
-    for (let i=0; slider_item.length > i; ++i) {
-      slider_item[i].addEventListener('click', (event) => {
-        popup_container.classList.add('active');
-        body[0].classList.add('block');
-      })
-    };
-
-    popup_close.addEventListener('click', (event) => {
-      popup_container.classList.remove('active');
-      body[0].classList.remove('block');
-    });
-  };
-
-
-
-
   let popupPosition = 0;
   const popupSlidesToShow = 1,
         popupSlidesToScroll = 1,
@@ -146,6 +122,35 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   popupCheckBtns();
+
+
+  popupSlider();
+
+  function popupSlider() {
+    let popup_container = document.querySelector('.popup_container'),
+        popup_close = document.querySelector('.popup_close'),
+        slider_item = document.querySelectorAll('.slider_item'),
+        body = document.getElementsByTagName('body');
+
+    for (let i=0; slider_item.length > i; ++i) {
+      slider_item[i].addEventListener('click', (event) => {
+
+        let indexData = Number(event.currentTarget.getAttribute("index-data"));
+        popupPosition = indexData === 0 ? 0 : indexData * -popupItemWidth;
+        popupSetPosition();
+
+        popup_container.classList.add('active');
+        body[0].classList.add('block');
+      })
+    };
+
+    popup_close.addEventListener('click', (event) => {
+      popup_container.classList.remove('active');
+      body[0].classList.remove('block');
+    });
+  };
+
+
 
 
 
